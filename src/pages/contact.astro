@@ -17,6 +17,7 @@ import Base from "../layouts/Base.astro";
     <div class="container">
       <div class="contact-grid">
         <div class="contact-info">
+          <img src="/contact-illustration.png" alt="Cabinet de conseil Horizon Immobilier" class="contact-image" />
           <h2>Pourquoi nous contacter ?</h2>
           <p>
             Que vous soyez en phase de réflexion ou prêt à investir, nos conseillers sont à votre disposition pour analyser votre situation fiscale et patrimoniale en toute confidentialité.
@@ -44,7 +45,6 @@ import Base from "../layouts/Base.astro";
               <label for="subject">Sujet de votre demande</label>
               <select id="subject" name="subject">
                 <option value="rdv">Réserver un rendez-vous conseil</option>
-                <option value="estimation">Estimation patrimoniale gratuite</option>
                 <option value="autre">Autre demande</option>
               </select>
             </div>
@@ -107,6 +107,13 @@ import Base from "../layouts/Base.astro";
     line-height: 1.6;
     margin-bottom: var(--space-md);
     color: var(--color-muted);
+  }
+  .contact-image {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-lg);
   }
   .contact-benefits {
     list-style: none;
