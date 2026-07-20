@@ -3,6 +3,7 @@ title: "Analyse du marché immobilier de Gap en 2026"
 description: "Évolutions démographiques, pôles économiques, infrastructures et simulation d'investissement LMNP à Gap."
 pubDate: 2026-07-20
 category: marche
+heroImage: "/gap-immo.png"
 author: "Horizon Immobilier"
 readingTime: 4
 tags: ["Gap", "Marché", "LMNP", "Analyse"]
