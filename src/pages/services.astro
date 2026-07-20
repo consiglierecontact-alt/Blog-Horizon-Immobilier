@@ -1,0 +1,91 @@
+---
+import Base from "../layouts/Base.astro";
+import CTASection from "../components/CTASection.astro";
+---
+
+<Base 
+  title="Nos Services" 
+  description="Découvrez nos services d'accompagnement en investissement immobilier."
+>
+  <div class="page-header">
+    <div class="container">
+      <h1 class="page-title">Nos Services</h1>
+      <p class="page-subtitle">Un accompagnement sur-mesure pour votre stratégie patrimoniale.</p>
+    </div>
+  </div>
+
+  <section class="services-section">
+    <div class="container">
+      <div class="services-grid">
+        <div class="service-card">
+          <h2>Audit Patrimonial</h2>
+          <p>
+            Analyse détaillée de votre situation fiscale et financière. Nous identifions avec vous vos capacités d'investissement et vos objectifs de rentabilité à court, moyen et long terme.
+          </p>
+        </div>
+        
+        <div class="service-card">
+          <h2>Investissement Locatif (LMNP / Pinel)</h2>
+          <p>
+            Recherche du bien idéal, modélisation financière et fiscale (statut LMNP, dispositif Pinel, etc.), et accompagnement jusqu'à la signature chez le notaire.
+          </p>
+        </div>
+        
+        <div class="service-card">
+          <h2>Optimisation Fiscale</h2>
+          <p>
+            Stratégies de réduction d'impôts adaptées à votre profil. Nous privilégions toujours la pertinence de l'investissement immobilier plutôt que la simple carotte fiscale.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</Base>
+
+<style>
+  .page-header {
+    background-color: var(--color-bg-subtle);
+    padding: var(--space-2xl) 0 var(--space-xl);
+    text-align: center;
+    border-bottom: 1px solid var(--color-rule);
+  }
+  .page-title {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: var(--weight-medium);
+    color: var(--color-ink);
+    margin-bottom: var(--space-xs);
+  }
+  .page-subtitle {
+    font-size: var(--text-body-lg);
+    color: var(--color-muted);
+  }
+  
+  .services-section {
+    padding: var(--space-2xl) 0;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+  }
+  .service-card {
+    background-color: var(--color-bg-subtle);
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+  }
+  .service-card h2 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    margin-bottom: var(--space-md);
+    color: var(--color-ink);
+  }
+  .service-card p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--color-muted);
+  }
+</style>
