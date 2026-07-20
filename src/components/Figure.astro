@@ -1,0 +1,81 @@
+---
+export interface Props {
+  /** Valeur du chiffre clé (ex : "250", "12", "8,4 %"). */
+  value: string;
+  /** Unité optionnelle (ex : "+", "ans", "M€"). */
+  unit?: string;
+  /** Libellé descriptif sous le chiffre. */
+  label: string;
+  /** Source optionnelle — fortement recommandée (Principle 1 : data avant opinion). */
+  source?: string;
+}
+
+const { value, unit, label, source } = Astro.props;
+---
+
+<figure class="figure">
+  <div class="figure-value">
+    {value}<span class="figure-unit">{unit}</span>
+  </div>
+  <div class="figure-rule" aria-hidden="true"></div>
+  <figcaption class="figure-label">{label}</figcaption>
+  {
+    source && (
+      <p class="figure-source">
+        Source : <span>{source}</span>
+      </p>
+    )
+  }
+</figure>
+
+<style>
+  .figure {
+    margin: 0;
+  }
+
+  .figure-value {
+    font-family: var(--font-display);
+    font-weight: var(--weight-regular);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--color-primary);
+  }
+
+  .figure-unit {
+    font-size: 0.55em;
+    margin-left: 0.05em;
+    color: var(--color-accent-deep);
+  }
+
+  .figure-rule {
+    width: 32px;
+    height: 2px;
+    background-color: var(--color-accent);
+    margin: var(--space-sm) 0;
+  }
+
+  .figure-label {
+    font-size: var(--text-body-sm);
+    line-height: 1.5;
+    color: var(--color-muted);
+    max-width: 22ch;
+  }
+
+  .figure-source {
+    margin-top: var(--space-2xs);
+    font-size: 0.75rem;
+    color: var(--color-muted-soft);
+  }
+
+  /* En section sombre, on inverse pour la lisibilité. */
+  :global(.section-deep) .figure-value {
+    color: var(--color-bg);
+  }
+  :global(.section-deep) .figure-label {
+    color: oklch(0.85 0.02 250);
+  }
+  :global(.section-deep) .figure-source {
+    color: oklch(0.7 0.02 250);
+  }
+</style>

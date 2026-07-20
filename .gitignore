@@ -1,0 +1,30 @@
+# Build output
+dist/
+.output/
+
+# Dependencies
+node_modules/
+
+# Astro
+.astro/
+
+# Environment
+.env
+.env.production
+.env.development
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Impeccable local artifacts (keep config, ignore runtime)
+.impeccable/live/sessions/

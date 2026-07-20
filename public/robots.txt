@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://horizon-immobilier.fr/sitemap-index.xml

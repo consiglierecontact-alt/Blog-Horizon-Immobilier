@@ -1,0 +1,180 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base 
+  title="Contact / Prendre un rendez-vous" 
+  description="Prenez rendez-vous avec l'un de nos conseillers experts en gestion de patrimoine."
+>
+  <div class="page-header">
+    <div class="container">
+      <h1 class="page-title">Échangeons sur vos projets</h1>
+      <p class="page-subtitle">Bénéficiez d'une estimation patrimoniale ou d'un conseil personnalisé.</p>
+    </div>
+  </div>
+
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Pourquoi nous contacter ?</h2>
+          <p>
+            Que vous soyez en phase de réflexion ou prêt à investir, nos conseillers sont à votre disposition pour analyser votre situation fiscale et patrimoniale en toute confidentialité.
+          </p>
+          <ul class="contact-benefits">
+            <li>✓ Audit patrimonial offert</li>
+            <li>✓ Analyse de votre capacité d'investissement</li>
+            <li>✓ Présentation de stratégies sur-mesure</li>
+          </ul>
+          <div class="contact-details">
+            <p><strong>Email :</strong> contact@horizon-immobilier.fr</p>
+            <p><strong>Téléphone :</strong> 01 23 45 67 89</p>
+          </div>
+        </div>
+        
+        <div class="contact-form-wrapper">
+          <form class="contact-form" onsubmit="event.preventDefault(); alert('Ce formulaire est une démonstration.');">
+            <div class="form-group">
+              <label for="name">Nom complet</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Adresse email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Sujet de votre demande</label>
+              <select id="subject" name="subject">
+                <option value="rdv">Réserver un rendez-vous conseil</option>
+                <option value="estimation">Estimation patrimoniale gratuite</option>
+                <option value="autre">Autre demande</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Votre message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block">Envoyer la demande</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .page-header {
+    background-color: var(--color-bg-subtle);
+    padding: var(--space-2xl) 0 var(--space-xl);
+    text-align: center;
+    border-bottom: 1px solid var(--color-rule);
+  }
+  .page-title {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: var(--weight-medium);
+    color: var(--color-ink);
+    margin-bottom: var(--space-xs);
+  }
+  .page-subtitle {
+    font-size: var(--text-body-lg);
+    color: var(--color-muted);
+  }
+  
+  .contact-section {
+    padding: var(--space-2xl) 0;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+    max-width: 1000px;
+    margin-inline: auto;
+  }
+  @media (min-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .contact-info h2 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    margin-bottom: var(--space-md);
+  }
+  .contact-info p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+    color: var(--color-muted);
+  }
+  .contact-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-xl);
+  }
+  .contact-benefits li {
+    font-size: 1.125rem;
+    margin-bottom: var(--space-xs);
+    color: var(--color-ink);
+  }
+  .contact-details p {
+    color: var(--color-ink);
+    margin-bottom: var(--space-xs);
+  }
+  
+  .contact-form-wrapper {
+    background-color: var(--color-bg-subtle);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-rule);
+  }
+  .form-group {
+    margin-bottom: var(--space-md);
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: var(--space-xs);
+    font-weight: var(--weight-medium);
+    color: var(--color-ink);
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: var(--space-sm);
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-base);
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: var(--color-bg);
+  }
+  .btn {
+    display: inline-block;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-base);
+    font-weight: var(--weight-medium);
+    text-decoration: none;
+    transition: background-color var(--duration-base) var(--ease-out);
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    font-size: 1rem;
+  }
+  .btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+  }
+  .btn-primary:hover {
+    background-color: var(--color-ink);
+  }
+  .btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+</style>

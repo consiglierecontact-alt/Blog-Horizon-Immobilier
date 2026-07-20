@@ -1,0 +1,139 @@
+---
+import Base from "../layouts/Base.astro";
+import ArticleCard from "../components/ArticleCard.astro";
+import CTASection from "../components/CTASection.astro";
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("posts", ({ data }) => {
+  return data.draft !== true;
+});
+
+const recentPosts = allPosts
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+---
+
+<Base 
+  title="Horizon Immobilier" 
+  description="Cabinet de conseil en investissement immobilier. Décisions d'investissement éclairées, validées par une expertise de confiance."
+>
+  <section class="hero-section">
+    <div class="container">
+      <h1 class="hero-title">L'investissement immobilier, pensé comme un acte patrimonial — pas comme un coup.</h1>
+      <p class="hero-subtitle">
+        Des analyses data-driven et un accompagnement indépendant pour constituer ou optimiser votre patrimoine immobilier.
+      </p>
+      <div class="hero-actions">
+        <a href="/contact" class="btn btn-primary">Réserver un rendez-vous conseil</a>
+        <a href="/a-propos" class="btn btn-secondary">Découvrir notre approche</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="recent-posts-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Dernières Analyses</h2>
+        <a href="/blog" class="section-link">Voir tous les articles &rarr;</a>
+      </div>
+      
+      <div class="posts-grid">
+        {recentPosts.map(post => (
+          <ArticleCard 
+            title={post.data.title}
+            description={post.data.description}
+            category={post.data.category}
+            href={`/blog/${post.id}`}
+            pubDate={post.data.pubDate}
+            readingTime={post.data.readingTime}
+            heroImage={post.data.heroImage}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</Base>
+
+<style>
+  .hero-section {
+    padding: calc(var(--space-2xl) * 2) 0 var(--space-2xl);
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-rule);
+    text-align: center;
+  }
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: var(--weight-medium);
+    color: var(--color-ink);
+    line-height: 1.1;
+    margin-bottom: var(--space-md);
+    max-width: 900px;
+    margin-inline: auto;
+  }
+  .hero-subtitle {
+    font-size: var(--text-body-lg);
+    color: var(--color-muted);
+    max-width: 600px;
+    margin-inline: auto;
+    margin-bottom: var(--space-xl);
+  }
+  .hero-actions {
+    display: flex;
+    gap: var(--space-sm);
+    justify-content: center;
+  }
+  .btn {
+    display: inline-block;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-base);
+    font-weight: var(--weight-medium);
+    text-decoration: none;
+    transition: all var(--duration-base) var(--ease-out);
+  }
+  .btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+  }
+  .btn-primary:hover {
+    background-color: var(--color-ink);
+  }
+  .btn-secondary {
+    background-color: transparent;
+    border: 1px solid var(--color-rule);
+    color: var(--color-ink);
+  }
+  .btn-secondary:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+  .recent-posts-section {
+    padding: var(--space-2xl) 0;
+  }
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: var(--space-xl);
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--color-ink);
+  }
+  .section-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: var(--weight-medium);
+  }
+  .section-link:hover {
+    text-decoration: underline;
+  }
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-lg);
+  }
+</style>

@@ -1,0 +1,289 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-17T12:30:00Z",
+  "title": "Design System: Horizon Immobilier",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink Blue",
+        "canonical": "oklch(0.22 0.03 250)",
+        "tonalRamp": [
+          "oklch(0.10 0.02 250)",
+          "oklch(0.16 0.03 250)",
+          "oklch(0.22 0.03 250)",
+          "oklch(0.32 0.03 250)",
+          "oklch(0.45 0.03 250)",
+          "oklch(0.60 0.03 250)",
+          "oklch(0.78 0.02 250)",
+          "oklch(0.92 0.01 250)"
+        ]
+      },
+      "bg": {
+        "role": "neutral",
+        "displayName": "Pure White",
+        "canonical": "oklch(1 0 0)",
+        "tonalRamp": [
+          "oklch(0.99 0 0)",
+          "oklch(0.995 0 0)",
+          "oklch(1 0 0)",
+          "oklch(1 0 0)",
+          "oklch(1 0 0)",
+          "oklch(1 0 0)",
+          "oklch(1 0 0)",
+          "oklch(1 0 0)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "oklch(0.98 0.005 250)",
+        "tonalRamp": [
+          "oklch(0.88 0.01 250)",
+          "oklch(0.92 0.008 250)",
+          "oklch(0.95 0.006 250)",
+          "oklch(0.97 0.005 250)",
+          "oklch(0.98 0.005 250)",
+          "oklch(0.99 0.003 250)",
+          "oklch(0.995 0.002 250)",
+          "oklch(1 0 0)"
+        ]
+      },
+      "primary": {
+        "role": "primary",
+        "displayName": "Institutional Blue",
+        "canonical": "oklch(0.32 0.08 250)",
+        "tonalRamp": [
+          "oklch(0.18 0.06 250)",
+          "oklch(0.22 0.07 250)",
+          "oklch(0.25 0.07 250)",
+          "oklch(0.28 0.08 250)",
+          "oklch(0.32 0.08 250)",
+          "oklch(0.42 0.08 250)",
+          "oklch(0.58 0.07 250)",
+          "oklch(0.78 0.05 250)"
+        ]
+      },
+      "primary-deep": {
+        "role": "primary",
+        "displayName": "Deep Boardroom",
+        "canonical": "oklch(0.25 0.07 250)",
+        "tonalRamp": [
+          "oklch(0.15 0.05 250)",
+          "oklch(0.20 0.06 250)",
+          "oklch(0.25 0.07 250)",
+          "oklch(0.30 0.07 250)",
+          "oklch(0.36 0.08 250)",
+          "oklch(0.46 0.08 250)",
+          "oklch(0.62 0.06 250)",
+          "oklch(0.80 0.04 250)"
+        ]
+      },
+      "accent": {
+        "role": "accent",
+        "displayName": "Brushed Brass",
+        "canonical": "oklch(0.68 0.12 85)",
+        "tonalRamp": [
+          "oklch(0.35 0.08 85)",
+          "oklch(0.45 0.10 85)",
+          "oklch(0.55 0.10 85)",
+          "oklch(0.60 0.11 85)",
+          "oklch(0.68 0.12 85)",
+          "oklch(0.78 0.10 85)",
+          "oklch(0.88 0.06 85)",
+          "oklch(0.95 0.03 85)"
+        ]
+      },
+      "accent-deep": {
+        "role": "accent",
+        "displayName": "Deep Brass",
+        "canonical": "oklch(0.55 0.10 85)",
+        "tonalRamp": [
+          "oklch(0.30 0.07 85)",
+          "oklch(0.40 0.09 85)",
+          "oklch(0.48 0.10 85)",
+          "oklch(0.55 0.10 85)",
+          "oklch(0.62 0.11 85)",
+          "oklch(0.72 0.10 85)",
+          "oklch(0.84 0.07 85)",
+          "oklch(0.93 0.04 85)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Slate",
+        "canonical": "oklch(0.55 0.02 250)",
+        "tonalRamp": [
+          "oklch(0.35 0.02 250)",
+          "oklch(0.42 0.02 250)",
+          "oklch(0.48 0.02 250)",
+          "oklch(0.52 0.02 250)",
+          "oklch(0.55 0.02 250)",
+          "oklch(0.65 0.02 250)",
+          "oklch(0.78 0.015 250)",
+          "oklch(0.90 0.01 250)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display Fraunces",
+        "purpose": "Hero de page d'accueil et titres d'article. Une occurrence par page."
+      },
+      "headline": {
+        "displayName": "Headline Fraunces",
+        "purpose": "Titres de section H2 dans les pages vitrines."
+      },
+      "title": {
+        "displayName": "Title Fraunces",
+        "purpose": "H3, titres de cartes article, sous-sections."
+      },
+      "body": {
+        "displayName": "Body Inter",
+        "purpose": "Texte courant articles et pages, max-width 65ch."
+      },
+      "label": {
+        "displayName": "Label Inter",
+        "purpose": "Eyebrows sémantiques, libellés de boutons, légendes."
+      },
+      "data": {
+        "displayName": "Data JetBrains Mono",
+        "purpose": "Chiffres financiers, tableaux de rendement, code fiscal."
+      }
+    },
+    "shadows": [
+      {
+        "name": "hover-lift",
+        "value": "0 1px 3px rgba(29, 35, 48, 0.08)",
+        "purpose": "Sur cartes d'article interactives au survol. À peine perceptible."
+      },
+      {
+        "name": "focus-ring",
+        "value": "0 0 0 3px oklch(0.68 0.12 85 / 0.4)",
+        "purpose": "Focus visible sur éléments interactifs. Laiton translucide."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.2, 0, 0, 1)",
+        "purpose": "Transitions d'état (hover, focus). 150-200ms."
+      },
+      {
+        "name": "none",
+        "value": "none",
+        "purpose": "Par défaut. Aucune entrée chorégraphiée, aucun parallaxe."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "CTA principal : RDV conseil, envoi de formulaire. Bleu institutionnel, texte blanc.",
+      "html": "<button class=\"ds-btn-primary\">Prendre rendez-vous</button>",
+      "css": ".ds-btn-primary { background: #1e3a5f; color: #ffffff; padding: 14px 28px; font: 600 12px/1 'Inter', system-ui, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; border: 1px solid #1e3a5f; border-radius: 2px; cursor: pointer; transition: background 150ms cubic-bezier(0.2,0,0,1); } .ds-btn-primary:hover { background: #15294a; border-color: #15294a; } .ds-btn-primary:focus-visible { outline: none; box-shadow: 0 0 0 3px oklch(0.68 0.12 85 / 0.4); }"
+    },
+    {
+      "name": "Accent Button",
+      "kind": "button",
+      "refersTo": "button-accent",
+      "description": "CTA premium lead magnet (estimation patrimoniale). Laiton, texte blanc. Un seul par page.",
+      "html": "<button class=\"ds-btn-accent\">Estimation gratuite</button>",
+      "css": ".ds-btn-accent { background: #b8884a; color: #ffffff; padding: 14px 28px; font: 600 12px/1 'Inter', system-ui, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; border: 1px solid #b8884a; border-radius: 2px; cursor: pointer; transition: background 150ms cubic-bezier(0.2,0,0,1); } .ds-btn-accent:hover { background: #9a6e34; border-color: #9a6e34; } .ds-btn-accent:focus-visible { outline: none; box-shadow: 0 0 0 3px oklch(0.68 0.12 85 / 0.4); }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Navigation secondaire, retour, actions tertiaires. Transparent, bord hairline.",
+      "html": "<button class=\"ds-btn-ghost\">Tous les articles</button>",
+      "css": ".ds-btn-ghost { background: transparent; color: #1e3a5f; padding: 14px 28px; font: 600 12px/1 'Inter', system-ui, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; border: 1px solid #dde1ea; border-radius: 2px; cursor: pointer; transition: background 150ms cubic-bezier(0.2,0,0,1); } .ds-btn-ghost:hover { background: #e7ecf3; border-color: #dde1ea; } .ds-btn-ghost:focus-visible { outline: none; box-shadow: 0 0 0 3px oklch(0.68 0.12 85 / 0.4); }"
+    },
+    {
+      "name": "Category Pill",
+      "kind": "chip",
+      "refersTo": "pill",
+      "description": "Chip de catégorie d'article. Laiton pâle, texte laiton foncé. État actif inversé.",
+      "html": "<span class=\"ds-pill\">Fiscalité</span>",
+      "css": ".ds-pill { display: inline-block; background: #f0e2c8; color: #9a6e34; padding: 4px 10px; font: 600 11px/1.4 'Inter', system-ui, sans-serif; letter-spacing: 0.06em; text-transform: uppercase; border: none; border-radius: 4px; } .ds-pill.is-active { background: #b8884a; color: #ffffff; }"
+    },
+    {
+      "name": "Article Card",
+      "kind": "card",
+      "refersTo": "card-article",
+      "description": "Carte d'article blog : image, pill catégorie, titre Fraunces, extrait, méta.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-card-media\"></div><div class=\"ds-card-body\"><span class=\"ds-pill\">Fiscalité</span><h3 class=\"ds-card-title\">Pinel 2026 : ce qui change pour l'investisseur</h3><p class=\"ds-card-excerpt\">Réduction d'impôt recentrée, zonage revu, plafonds de loyers actualisés. Le point sur ce qui change.</p><p class=\"ds-card-meta\">17 juil. 2026 · 8 min de lecture</p></div></article>",
+      "css": ".ds-card { background: #ffffff; border: 1px solid #dde1ea; border-radius: 8px; overflow: hidden; cursor: pointer; transition: box-shadow 150ms cubic-bezier(0.2,0,0,1); } .ds-card:hover { box-shadow: 0 1px 3px rgba(29,35,48,0.08); } .ds-card-media { aspect-ratio: 16/9; background: #e7ecf3; } .ds-card-body { padding: 24px; } .ds-pill { display: inline-block; background: #f0e2c8; color: #9a6e34; padding: 4px 10px; font: 600 11px/1.4 'Inter', sans-serif; letter-spacing: 0.06em; text-transform: uppercase; border-radius: 4px; } .ds-card-title { font: 500 1.375rem/1.3 'Fraunces', Georgia, serif; color: #1d2330; margin: 12px 0 8px; letter-spacing: -0.01em; } .ds-card-excerpt { font: 400 0.9375rem/1.6 'Inter', sans-serif; color: #5a647a; margin: 0 0 16px; } .ds-card-meta { font: 400 0.8125rem/1.4 'Inter', sans-serif; color: #5a647a; margin: 0; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Champ texte de formulaire. Bord hairline, focus bleu + ring laiton.",
+      "html": "<label class=\"ds-label\" for=\"name\">Votre nom</label><input class=\"ds-input\" id=\"name\" type=\"text\" placeholder=\"Jean Dupont\" />",
+      "css": ".ds-label { display: block; font: 600 12px/1.4 'Inter', sans-serif; letter-spacing: 0.04em; color: #1d2330; margin-bottom: 6px; } .ds-input { display: block; width: 100%; background: #ffffff; color: #1d2330; border: 1px solid #dde1ea; border-radius: 2px; padding: 12px 16px; font: 400 1rem/1.5 'Inter', sans-serif; transition: border-color 150ms cubic-bezier(0.2,0,0,1), box-shadow 150ms cubic-bezier(0.2,0,0,1); box-sizing: border-box; } .ds-input::placeholder { color: #9aa0b0; } .ds-input:focus { outline: none; border-color: #1e3a5f; box-shadow: 0 0 0 3px oklch(0.68 0.12 85 / 0.4); }"
+    },
+    {
+      "name": "Primary Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Header sticky : logo texte Fraunces + liens Inter 600 + CTA primary. Hairline laiton sous état actif.",
+      "html": "<header class=\"ds-nav\"><div class=\"ds-nav-inner\"><a class=\"ds-nav-logo\" href=\"/\">Horizon Immobilier</a><nav class=\"ds-nav-links\"><a class=\"ds-nav-link is-active\" href=\"/blog\">Analyses</a><a class=\"ds-nav-link\" href=\"/services\">Services</a><a class=\"ds-nav-link\" href=\"/a-propos\">À propos</a><a class=\"ds-nav-link\" href=\"/contact\">Contact</a></nav><button class=\"ds-btn-primary\">RDV conseil</button></div></header>",
+      "css": ".ds-nav { position: sticky; top: 0; background: #ffffff; border-bottom: 1px solid #dde1ea; z-index: 50; } .ds-nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 72px; display: flex; align-items: center; gap: 32px; } .ds-nav-logo { font: 500 1.25rem/1 'Fraunces', Georgia, serif; color: #1d2330; text-decoration: none; letter-spacing: -0.01em; } .ds-nav-links { display: flex; gap: 28px; margin-left: auto; } .ds-nav-link { font: 600 14px/1 'Inter', sans-serif; color: #1d2330; text-decoration: none; padding: 4px 0 8px; border-bottom: 2px solid transparent; transition: color 150ms cubic-bezier(0.2,0,0,1), border-color 150ms cubic-bezier(0.2,0,0,1); } .ds-nav-link:hover { color: #1e3a5f; } .ds-nav-link.is-active { color: #1e3a5f; border-bottom-color: #b8884a; }"
+    },
+    {
+      "name": "Figure (Signature)",
+      "kind": "custom",
+      "refersTo": "figure",
+      "description": "Chiffre clé de preuve. Fraunces display + label + hairline laiton. Un chiffre sans source est une promesse, pas une preuve.",
+      "html": "<figure class=\"ds-figure\"><div class=\"ds-figure-value\">250<span class=\"ds-figure-unit\">+</span></div><div class=\"ds-figure-rule\"></div><figcaption class=\"ds-figure-label\">Investisseurs accompagnés depuis 2014</figcaption></figure>",
+      "css": ".ds-figure { margin: 0; } .ds-figure-value { font: 400 clamp(2.5rem, 5vw, 3.5rem)/1.05 'Fraunces', Georgia, serif; color: #1e3a5f; letter-spacing: -0.02em; } .ds-figure-unit { font-size: 0.65em; } .ds-figure-rule { width: 32px; height: 2px; background: #b8884a; margin: 12px 0; } .ds-figure-label { font: 400 0.9375rem/1.5 'Inter', sans-serif; color: #5a647a; max-width: 22ch; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Private Boardroom",
+    "overview": "Ce design system incarne l'autorité tranquille d'un cabinet de conseil patrimonial — la pièce où l'on parle de plusieurs centaines de milliers d'euros à voix basse. Le silence visuel est un message : on ne vous emballe pas, on vous informe. La palette repose sur un bleu institutionnel profond posé sur un blanc pur, avec un accent laiton utilisé à dose homéopathique (≤10% de surface). Le mouvement est absent par défaut ; les transitions d'état sont courtes et servent uniquement à confirmer une interaction.",
+    "keyCharacteristics": [
+      "Bleu institutionnel profond + blanc pur + accent laiton ≤10%",
+      "Typographie éditoriale : Fraunces (display) + Inter (body) + JetBrains Mono (data)",
+      "Flat par défaut, profondeur par tonalité (pas par ombre)",
+      "Angles très peu arrondis (2-8px) — institutionnel, pas ludique",
+      "Contrastes WCAG AA strict, AA renforcé sur body",
+      "Motion quasi-absent, lisibilité maximale, sobriété comme preuve de sérieux"
+    ],
+    "rules": [
+      { "name": "The 10% Brass Rule", "body": "L'accent laiton ne couvre jamais plus de 10% de la surface visible d'un écran. Sa rareté est ce qui le rend précieux.", "section": "colors" },
+      { "name": "The No Warm-Cream Rule", "body": "Le fond est blanc pur ou tiré vers le bleu froid. Toute tentation de warm-cream, off-white crème, beige AI est interdite.", "section": "colors" },
+      { "name": "The 75-Character Rule", "body": "Aucune colonne de prose d'article ne dépasse 75 caractères. Respect du lecteur.", "section": "typography" },
+      { "name": "The Eyebrow Restriction Rule", "body": "Les eyebrows uppercase letter-spaced sont autorisés uniquement quand ils portent une information sémantique réelle. Jamais comme décoration.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Les surfaces sont flat au repos. Les ombres apparaissent uniquement comme réponse à un état (hover, focus), jamais comme décoration.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do respecter la 10% Brass Rule : le laiton couvre ≤10% de la surface visible",
+      "Do garder le body text en Ink Blue sur Pure White ou Paper — contraste ~13:1",
+      "Do limiter la prose d'article à 65-75 caractères de largeur (max-width: 65ch)",
+      "Do sourcer chaque chiffre mis en avant",
+      "Do utiliser Fraunces uniquement pour les titres et chiffres clés ; Inter porte tout le reste",
+      "Do poser le focus visible (Focus Ring laiton 3px) sur tout élément interactif",
+      "Do respecter prefers-reduced-motion : aucune transition décorative si demandé"
+    ],
+    "donts": [
+      "Don't utiliser de warm-cream / off-white / beige en fond. Fond Pure White ou Paper (froid) uniquement",
+      "Don't faire de hero avec carrousel de biens immobiliers, photos Pinterest, video background floue",
+      "Don't utiliser de gradient text sur les titres, eyebrows spaced-out décoratifs, icônes Lucide génériques en cartes bicolores",
+      "Don't écrire de gray-on-gray body text",
+      "Don't utiliser de pop-up d'urgence, compte à rebours, badge stock limité, FOMO",
+      "Don't dépasser radius 8px — pas de rounded-full, pas de rounded-2xl",
+      "Don't poser deux boutons accent laiton sur la même page",
+      "Don't animer les chiffres clés au scroll (compteur progressif)"
+    ]
+  }
+}

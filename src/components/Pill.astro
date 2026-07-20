@@ -1,0 +1,55 @@
+---
+import { categoryLabel } from "../data/categories";
+
+export interface Props {
+  /** Slug de catégorie OU libellé direct. */
+  category: string;
+  /** Lier vers la page catégorie. */
+  href?: string;
+  /** État actif (filtre sélectionné). */
+  isActive?: boolean;
+}
+
+const { category, href, isActive = false } = Astro.props;
+const label = categoryLabel(category);
+
+const Tag = href ? "a" : "span";
+---
+
+<Tag
+  class:list={["pill", { "is-active": isActive }]}
+  href={href}
+  aria-current={isActive ? "page" : undefined}
+>
+  {label}
+</Tag>
+
+<style>
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    background-color: var(--color-accent-soft);
+    color: var(--color-accent-deep);
+    font-family: var(--font-body);
+    font-size: 0.6875rem;
+    font-weight: var(--weight-semibold);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: background-color var(--duration-base) var(--ease-out),
+      color var(--duration-base) var(--ease-out);
+  }
+
+  a.pill:hover {
+    background-color: var(--color-accent);
+    color: var(--color-on-accent);
+    text-decoration: none;
+  }
+
+  .pill.is-active {
+    background-color: var(--color-accent);
+    color: var(--color-on-accent);
+  }
+</style>

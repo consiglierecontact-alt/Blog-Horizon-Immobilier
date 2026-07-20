@@ -1,0 +1,143 @@
+---
+import Pill from "./Pill.astro";
+
+export interface Props {
+  title: string;
+  description: string;
+  category: string;
+  href: string;
+  pubDate: Date;
+  readingTime?: number;
+  /** Image hero de l'article (URL). Si absente, fallback neutre. */
+  heroImage?: string;
+  /** Variation compacte pour listes denses. */
+  compact?: boolean;
+}
+
+const {
+  title,
+  description,
+  category,
+  href,
+  pubDate,
+  readingTime,
+  heroImage,
+  compact = false,
+} = Astro.props;
+
+const dateFmt = new Intl.DateTimeFormat("fr-FR", {
+  day: "numeric",
+  month: "short",
+  year: "numeric",
+});
+
+const meta = [
+  dateFmt.format(pubDate),
+  readingTime ? `${readingTime} min de lecture` : null,
+]
+  .filter(Boolean)
+  .join(" · ");
+---
+
+<article class:list={["card", { "is-compact": compact }]}>
+  <a href={href} class="card-link">
+    <div class="card-media" style={heroImage ? `background-image: url('${heroImage}')` : undefined}>
+      {!heroImage && <span class="card-media-mark" aria-hidden="true">H</span>}
+    </div>
+    <div class="card-body">
+      <Pill category={category} href={`/blog/categorie/${category}`} />
+      <h3 class="card-title">{title}</h3>
+      <p class="card-excerpt">{description}</p>
+      <p class="card-meta">{meta}</p>
+    </div>
+  </a>
+</article>
+
+<style>
+  .card {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: box-shadow var(--duration-base) var(--ease-out),
+      border-color var(--duration-base) var(--ease-out);
+  }
+
+  .card:hover {
+    box-shadow: var(--shadow-hover-lift);
+    border-color: var(--color-primary-soft);
+  }
+
+  .card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .card-media {
+    aspect-ratio: 16 / 9;
+    background-color: var(--color-primary-soft);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-media-mark {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    opacity: 0.25;
+    letter-spacing: -0.02em;
+  }
+
+  .card-body {
+    padding: var(--space-lg);
+  }
+
+  .card-title {
+    font-family: var(--font-display);
+    font-weight: var(--weight-medium);
+    font-size: var(--text-title);
+    line-height: var(--text-title-lh);
+    letter-spacing: var(--text-title-ls);
+    color: var(--color-ink);
+    margin: var(--space-sm) 0 var(--space-xs);
+  }
+
+  .card-excerpt {
+    font-size: var(--text-body-sm);
+    line-height: var(--text-body-sm-lh);
+    color: var(--color-muted);
+    margin: 0 0 var(--space-md);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .card-meta {
+    font-size: 0.8125rem;
+    color: var(--color-muted);
+    margin: 0;
+  }
+
+  /* Variation compacte : pas de media, padding réduit, pour listes latérales. */
+  .is-compact .card-media {
+    display: none;
+  }
+
+  .is-compact .card-body {
+    padding: var(--space-md);
+  }
+
+  .is-compact .card-title {
+    font-size: 1.0625rem;
+    margin-top: var(--space-xs);
+  }
+
+  .is-compact .card-excerpt {
+    -webkit-line-clamp: 1;
+  }
+</style>

@@ -1,0 +1,283 @@
+---
+import { CATEGORIES } from "../data/categories";
+
+const year = new Date().getFullYear();
+
+const navLinks = [
+  { href: "/services", label: "Services" },
+  { href: "/a-propos", label: "À propos" },
+  { href: "/blog", label: "Analyses" },
+  { href: "/estimation", label: "Estimation patrimoniale" },
+  { href: "/contact", label: "Contact" },
+];
+
+const legalLinks = [
+  { href: "/mentions-legales", label: "Mentions légales" },
+  { href: "/confidentialite", label: "Confidentialité" },
+  { href: "/cookies", label: "Cookies" },
+];
+---
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo">Horizon Immobilier</a>
+      <p class="footer-tagline">
+        Cabinet de conseil en investissement immobilier. L'expertise d'un cabinet
+        private, rendue lisible.
+      </p>
+      <form class="footer-newsletter" aria-label="Inscription à la lettre d'analyses">
+        <label for="footer-email" class="footer-newsletter-label">
+          Analyses hebdomadaires — gratuit
+        </label>
+        <div class="footer-newsletter-input">
+          <input
+            type="email"
+            id="footer-email"
+            name="email"
+            placeholder="vous@email.fr"
+            required
+            autocomplete="email"
+          />
+          <button type="submit" class="btn btn-accent">S'inscrire</button>
+        </div>
+        <p class="footer-newsletter-fineprint">
+          Une analyse par semaine. Désinscription en un clic.
+        </p>
+      </form>
+    </div>
+
+    <nav class="footer-col" aria-label="Navigation de pied de page">
+      <p class="eyebrow">Navigation</p>
+      <ul>
+        {
+          navLinks.map((link) => (
+            <li>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <nav class="footer-col" aria-label="Catégories d'analyse">
+      <p class="eyebrow">Catégories</p>
+      <ul>
+        {
+          CATEGORIES.map((cat) => (
+            <li>
+              <a href={`/blog/categorie/${cat.slug}`}>{cat.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <div class="footer-col">
+      <p class="eyebrow">Contact</p>
+      <address class="footer-address">
+        <a href="mailto:contact@horizon-immobilier.fr">contact@horizon-immobilier.fr</a><br />
+        <a href="tel:+33100000000">+33 1 00 00 00 00</a><br />
+        <span class="footer-address-line">
+          12, place de la Bourse<br />75002 Paris
+        </span>
+      </address>
+    </div>
+  </div>
+
+  <div class="container footer-meta">
+    <p>© {year} Horizon Immobilier — Tous droits réservés.</p>
+    <nav class="footer-legal" aria-label="Mentions légales">
+      {
+        legalLinks.map((link) => (
+          <a href={link.href}>{link.label}</a>
+        ))
+      }
+    </nav>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background-color: var(--color-surface-deep);
+    border-top: 1px solid var(--color-rule);
+    padding-block: var(--space-4xl) var(--space-xl);
+    color: var(--color-muted);
+    font-size: var(--text-body-sm);
+    line-height: var(--text-body-sm-lh);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.4fr;
+    gap: var(--space-3xl);
+    padding-bottom: var(--space-3xl);
+    border-bottom: 1px solid var(--color-rule);
+  }
+
+  .footer-logo {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: var(--weight-medium);
+    color: var(--color-ink);
+    text-decoration: none;
+    margin-bottom: var(--space-sm);
+    letter-spacing: -0.01em;
+  }
+
+  .footer-tagline {
+    color: var(--color-muted);
+    max-width: 36ch;
+    margin-bottom: var(--space-xl);
+  }
+
+  .footer-newsletter {
+    max-width: 420px;
+  }
+
+  .footer-newsletter-label {
+    display: block;
+    font-family: var(--font-body);
+    font-size: var(--text-label);
+    font-weight: var(--weight-semibold);
+    letter-spacing: var(--text-label-ls);
+    text-transform: uppercase;
+    color: var(--color-accent-deep);
+    margin-bottom: var(--space-xs);
+  }
+
+  .footer-newsletter-input {
+    display: flex;
+    gap: var(--space-xs);
+  }
+
+  .footer-newsletter-input input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 16px;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: var(--text-body-sm);
+    color: var(--color-ink);
+  }
+
+  .footer-newsletter-input input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-focus-ring);
+  }
+
+  .footer-newsletter-input .btn {
+    padding-inline: 18px;
+    font-size: 0.6875rem;
+  }
+
+  .footer-newsletter-fineprint {
+    margin-top: var(--space-xs);
+    color: var(--color-muted-soft);
+    font-size: 0.8125rem;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-sm) 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .footer-col a {
+    color: var(--color-muted);
+    text-decoration: none;
+    transition: color var(--duration-fast) var(--ease-out);
+  }
+
+  .footer-col a:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .footer-address {
+    font-style: normal;
+    margin-top: var(--space-sm);
+    line-height: 1.7;
+  }
+
+  .footer-address a {
+    color: var(--color-muted);
+    text-decoration: none;
+  }
+
+  .footer-address a:hover {
+    color: var(--color-primary);
+  }
+
+  .footer-address-line {
+    display: inline-block;
+    margin-top: var(--space-xs);
+    color: var(--color-muted-soft);
+  }
+
+  .footer-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    padding-top: var(--space-xl);
+    font-size: 0.8125rem;
+    color: var(--color-muted-soft);
+  }
+
+  .footer-meta p {
+    margin: 0;
+  }
+
+  .footer-legal {
+    display: flex;
+    gap: var(--space-lg);
+  }
+
+  .footer-legal a {
+    color: var(--color-muted-soft);
+    text-decoration: none;
+  }
+
+  .footer-legal a:hover {
+    color: var(--color-primary);
+  }
+
+  @media (max-width: 900px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-2xl);
+    }
+    .footer-brand {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: 540px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+    .footer-newsletter-input {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .footer-newsletter-input .btn {
+      align-self: flex-start;
+    }
+    .footer-meta {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .footer-legal {
+      flex-wrap: wrap;
+    }
+  }
+</style>

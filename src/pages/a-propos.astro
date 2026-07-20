@@ -1,0 +1,87 @@
+---
+import Base from "../layouts/Base.astro";
+import CTASection from "../components/CTASection.astro";
+---
+
+<Base 
+  title="À propos" 
+  description="Découvrez l'approche et l'expertise d'Horizon Immobilier."
+>
+  <div class="page-header">
+    <div class="container">
+      <h1 class="page-title">Notre approche patrimoniale</h1>
+      <p class="page-subtitle">Indépendance, rigueur et stratégie de long terme.</p>
+    </div>
+  </div>
+
+  <section class="content-section">
+    <div class="container prose">
+      <h2>L'expertise d'un cabinet private, rendue lisible</h2>
+      <p>
+        Horizon Immobilier est né d'un constat simple : l'investissement immobilier manque trop souvent de clarté. Face à un discours commercial souvent agressif et axé sur le court terme ("coup de cœur", "rentabilité exceptionnelle"), nous avons choisi de nous positionner différemment.
+      </p>
+      <p>
+        Nous ne vendons pas de biens sur catalogue. Nous vendons du conseil et de la clarté pour des décisions patrimoniales structurantes. Chaque investissement doit s'inscrire dans une stratégie globale, tenant compte de votre fiscalité, de votre horizon de placement et de votre appétence au risque.
+      </p>
+      
+      <h3>La donnée avant l'opinion</h3>
+      <p>
+        Chaque recommandation s'appuie sur une analyse chiffrée. Nous analysons les dynamiques de marché, les évolutions réglementaires et fiscales, pour vous proposer des stratégies d'investissement solides et documentées.
+      </p>
+      
+      <h3>Notre équipe</h3>
+      <p>
+        Nos conseillers sont des experts en gestion de patrimoine, spécialisés dans l'immobilier d'investissement (Pinel, LMNP, Malraux, Déficit Foncier). Ils vous accompagnent de la définition de votre stratégie jusqu'à la concrétisation de votre projet.
+      </p>
+    </div>
+  </section>
+
+  <CTASection />
+</Base>
+
+<style>
+  .page-header {
+    background-color: var(--color-bg-subtle);
+    padding: var(--space-2xl) 0 var(--space-xl);
+    text-align: center;
+    border-bottom: 1px solid var(--color-rule);
+  }
+  .page-title {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: var(--weight-medium);
+    color: var(--color-ink);
+    margin-bottom: var(--space-xs);
+  }
+  .page-subtitle {
+    font-size: var(--text-body-lg);
+    color: var(--color-muted);
+  }
+  .content-section {
+    padding: var(--space-2xl) 0;
+  }
+  .prose {
+    max-width: 75ch;
+    margin-inline: auto;
+  }
+  .prose h2 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--color-ink);
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+  }
+  .prose h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--color-ink);
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  .prose p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--color-ink);
+    margin-bottom: 1.5em;
+  }
+</style>

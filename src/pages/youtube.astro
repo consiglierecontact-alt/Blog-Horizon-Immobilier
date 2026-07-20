@@ -1,0 +1,99 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base 
+  title="Vidéos YouTube" 
+  description="Retrouvez toutes nos analyses en format vidéo sur notre chaîne YouTube."
+>
+  <div class="page-header">
+    <div class="container">
+      <h1 class="page-title">Nos vidéos YouTube</h1>
+      <p class="page-subtitle">Des analyses de marché et conseils en investissement en format vidéo.</p>
+    </div>
+  </div>
+
+  <section class="youtube-section">
+    <div class="container">
+      <div class="youtube-grid">
+        <!-- Placeholder pour l'intégration des vidéos -->
+        <div class="video-card">
+          <div class="video-placeholder">
+            <span>Intégration YouTube à venir</span>
+          </div>
+          <div class="video-info">
+            <h3>Dernière analyse de marché</h3>
+            <p>Retrouvez notre dernier point sur le marché immobilier.</p>
+          </div>
+        </div>
+        
+        <div class="video-card">
+          <div class="video-placeholder">
+            <span>Intégration YouTube à venir</span>
+          </div>
+          <div class="video-info">
+            <h3>Comprendre le dispositif Pinel</h3>
+            <p>Ce qu'il faut savoir avant d'investir.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .page-header {
+    background-color: var(--color-bg-subtle);
+    padding: var(--space-2xl) 0 var(--space-xl);
+    text-align: center;
+    border-bottom: 1px solid var(--color-rule);
+  }
+  .page-title {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: var(--weight-medium);
+    color: var(--color-ink);
+    margin-bottom: var(--space-xs);
+  }
+  .page-subtitle {
+    font-size: var(--text-body-lg);
+    color: var(--color-muted);
+  }
+  
+  .youtube-section {
+    padding: var(--space-2xl) 0;
+  }
+  .youtube-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: var(--space-xl);
+  }
+  .video-card {
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background-color: var(--color-bg);
+  }
+  .video-placeholder {
+    aspect-ratio: 16 / 9;
+    background-color: var(--color-primary-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    font-weight: var(--weight-medium);
+  }
+  .video-info {
+    padding: var(--space-md);
+  }
+  .video-info h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    margin-bottom: var(--space-xs);
+    color: var(--color-ink);
+  }
+  .video-info p {
+    color: var(--color-muted);
+    font-size: 0.875rem;
+  }
+</style>
