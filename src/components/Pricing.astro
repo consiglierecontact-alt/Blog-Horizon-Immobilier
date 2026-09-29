@@ -1,0 +1,180 @@
+---
+const products = [
+  {
+    title: "Le Rapport Sectoriel",
+    price: "19,99 €",
+    description: "Ne devinez plus, basez-vous sur la data brute. Un rapport d'expertise complet et clé en main sur la ville de votre choix. Vous obtenez le portrait du marché pour savoir où acheter, où fuir et quel rendement viser réellement.",
+    cta: "Commander",
+    link: "https://buy.stripe.com/fZueVd5ToeeW5Jt1wF1RC01"
+  },
+  {
+    title: "L'Avis Cash",
+    price: "37,00 €",
+    description: "Vous bloquez sur un point précis, une situation bancaire, un doute sur une stratégie ou un montage ? Envoyez-moi un mémo de 1.000 caractères décrivant votre cas. Je l'analyse et je vous réponds par un message vocal détaillé et sans filtre sur WhatsApp sous 48h. Zéro prise de tête d'agenda, juste l'expertise d'un pro pour débloquer votre situation instantanément.",
+    cta: "Commander",
+    link: "https://buy.stripe.com/5kQ7sL6Xs7Qygo7a3b1RC02"
+  },
+  {
+    title: "La Contre-Analyse",
+    price: "57,00 €",
+    description: "Vous hésitez entre plusieurs biens ou vous avez repéré 5 annonces ? Envoyez-les-moi. Je passe chaque annonce au crible de mon expertise : recalcul du vrai cash-flow, charges cachées, pièges du secteur et décote réelle à exiger. Je vous dis lesquelles méritent un déplacement et lesquelles sont à jeter à la poubelle.",
+    cta: "Commander",
+    link: "https://buy.stripe.com/5kQdR91D8eeW4Fpb7f1RC00"
+  },
+  {
+    title: "Programme 90 Jours",
+    price: "1 700,00 €",
+    description: "L'accompagnement sur-mesure pour vous poussez à l'action. Un plan de route personnalisé, des points réguliers en visio, un accès direct à moi en privé (pour valider vos visites ou vos offres en temps réel). La transformation complète pour investir sans stress et sans se faire piéger.",
+    cta: "Candidater",
+    link: "https://buy.stripe.com/6oU6oHchM1sadbV8Z71RC03",
+    highlight: true
+  }
+];
+---
+
+<section class="pricing-section" id="offres">
+  <div class="container">
+    <div class="pricing-header">
+      <h2 class="section-title">Nos Offres & Accompagnements</h2>
+      <p class="section-subtitle">Passez à l'action avec l'expertise d'un professionnel à vos côtés.</p>
+    </div>
+
+    <div class="pricing-grid">
+      {products.map(product => (
+        <div class:list={["pricing-card", { "is-highlighted": product.highlight }]}>
+          <div class="card-header">
+            <h3 class="product-title">{product.title}</h3>
+            <div class="product-price">{product.price}</div>
+          </div>
+          <div class="card-body">
+            <p class="product-description">{product.description}</p>
+          </div>
+          <div class="card-footer">
+            <a href={product.link} target="_blank" rel="noopener noreferrer" class:list={["btn", product.highlight ? "btn-primary" : "btn-outline"]}>
+              {product.cta}
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .pricing-section {
+    padding: var(--space-2xl) 0;
+    background-color: var(--color-bg);
+  }
+  .pricing-header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--color-ink);
+    margin-bottom: var(--space-xs);
+  }
+  .section-subtitle {
+    font-size: var(--text-body-lg);
+    color: var(--color-muted);
+  }
+  
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-lg);
+  }
+  
+  .pricing-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  }
+  
+  .pricing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover-lift);
+  }
+  
+  .pricing-card.is-highlighted {
+    border: 2px solid var(--color-primary);
+    background-color: var(--color-bg-subtle);
+  }
+  
+  .card-header {
+    margin-bottom: var(--space-md);
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: var(--space-md);
+  }
+  
+  .product-title {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: var(--weight-medium);
+    color: var(--color-ink);
+    margin: 0 0 var(--space-xs) 0;
+  }
+  
+  .product-price {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: var(--weight-semibold);
+    color: var(--color-primary);
+  }
+  
+  .card-body {
+    flex-grow: 1;
+    margin-bottom: var(--space-xl);
+  }
+  
+  .product-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-muted);
+    margin: 0;
+  }
+  
+  .card-footer {
+    margin-top: auto;
+  }
+  
+  .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-base);
+    font-weight: var(--weight-medium);
+    text-decoration: none;
+    transition: all var(--duration-base) var(--ease-out);
+    font-family: inherit;
+    font-size: 1rem;
+  }
+  
+  .btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+    border: 1px solid var(--color-primary);
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--color-ink);
+    border-color: var(--color-ink);
+  }
+  
+  .btn-outline {
+    background-color: transparent;
+    border: 1px solid #e5e5e5;
+    color: var(--color-ink);
+  }
+  
+  .btn-outline:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+</style>
