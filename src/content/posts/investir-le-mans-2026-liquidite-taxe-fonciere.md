@@ -3,6 +3,7 @@ title: "Investir au Mans en 2026 : la liquidité du TGV, la taxe foncière en pl
 description: "Le Mans : T2 à 92 000 €, 7,4 % brut, environ 4,2 % net, à 55 minutes de Paris. Mais une taxe foncière passée de 13,65 % à 34,71 %."
 pubDate: 2026-11-16
 category: marche
+heroImage: "/ville-le-mans.png"
 author: "Horizon Immobilier"
 readingTime: 6
 tags: ["Le Mans", "Villes moyennes", "Taxe foncière", "Rendement net", "Revenu complémentaire"]

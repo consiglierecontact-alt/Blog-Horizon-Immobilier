@@ -3,6 +3,7 @@ title: "Investir à Troyes en 2026 : 4,1 % net, mais l'adresse fait tout"
 description: "Troyes : T2 à 84 500 €, 7,1 % brut, 4,1 % net. Pauvreté et vacance en centre-ville : comment choisir sa rue avant d'investir."
 pubDate: 2026-11-16
 category: marche
+heroImage: "/ville-troyes.png"
 author: "Horizon Immobilier"
 readingTime: 6
 tags: ["Troyes", "Villes moyennes", "Rendement net", "Vacance locative", "Revenu complémentaire"]

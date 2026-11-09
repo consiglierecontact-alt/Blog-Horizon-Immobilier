@@ -3,6 +3,7 @@ title: "Investir à Limoges en 2026 : le meilleur rendement, mais attention à l
 description: "Limoges : T2 à 71 000 €, près de 9 % brut, environ 5 % net. Mais un taux de taxe foncière passé de 19 % à 42 % en cinq ans. Analyse complète."
 pubDate: 2026-11-16
 category: marche
+heroImage: "/ville-limoges.png"
 author: "Horizon Immobilier"
 readingTime: 6
 tags: ["Limoges", "Villes moyennes", "Taxe foncière", "Rendement net", "Revenu complémentaire"]

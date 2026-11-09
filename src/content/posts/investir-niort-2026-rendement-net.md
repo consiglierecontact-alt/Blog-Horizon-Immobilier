@@ -3,6 +3,7 @@ title: "Investir à Niort en 2026 : rendement net, loyers et risques"
 description: "Niort, capitale des mutuelles : un T2 à 90 000 € pour environ 3,8 % net. Prix, loyers, fiscalité et le risque à connaître avant d'acheter."
 pubDate: 2026-11-16
 category: marche
+heroImage: "/ville-niort.png"
 author: "Horizon Immobilier"
 readingTime: 6
 tags: ["Niort", "Villes moyennes", "Rendement net", "LMNP", "Revenu complémentaire"]

@@ -3,6 +3,7 @@ title: "Investir à Bourges en 2026 : le boom de la défense tire-t-il les loyer
 description: "Bourges : T2 à 74 000 €, 8,3 % brut, environ 4,8 % net, porté par MBDA. Mais dépendance à quelques employeurs et revente incertaine."
 pubDate: 2026-11-16
 category: marche
+heroImage: "/ville-bourges.png"
 author: "Horizon Immobilier"
 readingTime: 6
 tags: ["Bourges", "Villes moyennes", "Défense", "Rendement net", "Revenu complémentaire"]
